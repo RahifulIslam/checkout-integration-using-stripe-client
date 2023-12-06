@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ const Login = () => {
     password: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -25,6 +27,8 @@ const Login = () => {
       );
       console.log(response.data); // Handle successful login
       setErrorMessage(""); // Clear any existing error message
+      localStorage.setItem("token", response.data.token);
+      navigate("/product-list");
     } catch (error) {
       console.error(error);
       setErrorMessage(error.response.data.message);
