@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { productsArray } from "../../productsStore";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import Navbar from "../navigation/Navbar";
 const url = "http://localhost:4003";
 
 const ProductList = () => {
@@ -12,13 +12,10 @@ const ProductList = () => {
     0
   );
 
-  // const user = useSelector((state)=> state.auth)
-
   const handleCheckout = () => {
     axios
       .post(`${url}/api/payment/create-checkout-session`, {
         productsArray,
-        // userId: user._id
       })
       .then((res) => {
         console.log("data are:", res.data.url);
@@ -30,6 +27,8 @@ const ProductList = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="mt-[7rem] ml-[12rem] mr-[12rem]">
       {productsArray.map((product) => {
         // console.log(product)
@@ -66,6 +65,7 @@ const ProductList = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 

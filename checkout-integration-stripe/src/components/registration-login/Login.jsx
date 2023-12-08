@@ -87,10 +87,8 @@ const Login = () => {
           {errorMessage && (
             <p style={{ color: "red", marginTop: "8px" }}>{errorMessage}</p>
           )}
-          <div className="mt-4 flex justify-center">
-          <button className="mt-4 bg-green-500 text-white py-2 px-4 rounded-md hover:bg-green-600 focus:outline-none focus:ring focus:border-green-300">
+          <div className="mt-4 text-green-500 underline flex justify-center">
             <Link to="/registration">Create a new account</Link>
-          </button>
           </div>
         </form>
       </div>

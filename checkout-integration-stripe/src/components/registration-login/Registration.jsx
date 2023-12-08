@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Registration = () => {
     const [formData, setFormData] = useState({
@@ -96,6 +97,9 @@ const Registration = () => {
       </button>
       {errorMessage && <p style={{ color: 'red', marginTop: '8px' }}>{errorMessage}</p>} {/* Display the error message */}
       {successMessage && <p style={{ color: 'green', marginTop: '8px' }}>{successMessage}</p>}
+      <div className="mt-4 text-green-500 underline flex justify-center">
+            <Link to="/">Go the the login page</Link>
+      </div>
     </form>
     </div>
   </div>
