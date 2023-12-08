@@ -95,7 +95,7 @@ const Registration = () => {
       >
         Register
       </button>
-      {errorMessage && <p style={{ color: 'red', marginTop: '8px' }}>{errorMessage}</p>} {/* Display the error message */}
+      {errorMessage && <p style={{ color: 'red', marginTop: '8px' }}>{errorMessage}</p>}
       {successMessage && <p style={{ color: 'green', marginTop: '8px' }}>{successMessage}</p>}
       <div className="mt-4 text-green-500 underline flex justify-center">
             <Link to="/">Go the the login page</Link>
