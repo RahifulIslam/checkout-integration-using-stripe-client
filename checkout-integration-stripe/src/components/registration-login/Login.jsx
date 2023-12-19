@@ -38,7 +38,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="w-1/3">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4">
         <form
           className="max-w-xl p-8 bg-white shadow-md rounded-md"
           onSubmit={handleSubmit}
@@ -57,7 +57,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="mt-1 p-2 w-full sm:w-96 border rounded-md"
               required
             />
           </div>
@@ -74,7 +74,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="mt-1 p-2 w-full border rounded-md"
+              className="mt-1 p-2 w-full sm:w-96 border rounded-md"
               required
             />
           </div>
@@ -87,7 +87,7 @@ const Login = () => {
           {errorMessage && (
             <p style={{ color: "red", marginTop: "8px" }}>{errorMessage}</p>
           )}
-          <div className="mt-4 text-green-500 underline flex justify-center">
+          <div className="mt-4 text-green-500 underline flex justify-center lg:hidden">
             <Link to="/registration">Create a new account</Link>
           </div>
         </form>
