@@ -26,7 +26,7 @@ const Registration = () => {
         e.preventDefault();
         try {
             const response = await axios.post(
-              "http://localhost:4003/api/user/sign-up",
+              "https://product-checkout-integration.onrender.com/api/user/sign-up",
               formData
             );
             setSuccessMessage(response.data.message);

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { productsArray } from "../../productsStore";
 import axios from "axios";
 import Navbar from "../navigation/Navbar";
-const url = "http://localhost:4003";
+const url = "https://product-checkout-integration.onrender.com";
 
 const ProductList = () => {
   // Calculate total price
