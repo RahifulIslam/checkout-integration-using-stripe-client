@@ -29,31 +29,33 @@ const ProductList = () => {
   return (
     <>
     <Navbar/>
-    <div className="mt-[7rem] ml-[12rem] mr-[12rem]">
+    <div className="mt-7 md:ml-12 md:mr-12">
       {productsArray.map((product) => {
         // console.log(product)
         return (
           <div
             key={product.id}
-            className="flex justify-between items-center border-b border-gray-300 p-2"
+            className="flex flex-col md:flex-row justify-between items-center border-b border-gray-300 p-2 md:space-x-4"
           >
             <img
               src={product.image}
               alt={product.name}
-              className="w-16 h-16 object-cover rounded mr-4"
+              className="w-16 h-16 object-cover rounded mb-2 md:mb-0"
             />
-            <h2 className="text-xl font-semibold">{product.name}</h2>
-            <p className="text-gray-600">${product.price.toFixed(2)}</p>
+           <div className="flex-grow">
+              <h2 className="text-xl font-semibold">{product.name}</h2>
+              <p className="text-gray-600">${product.price.toFixed(2)}</p>
+            </div>
           </div>
         );
       })}
       {/* Display Total Price */}
-      <div className="flex justify-end mt-4">
-        <p className="text-xl font-semibold">
+      <div className="flex flex-col items-center mt-4">
+        <p className="text-xl font-semibold mb-2">
           Total Price: ${totalPrice.toFixed(2)}
         </p>
       </div>
-      <div className="flex justify-end mt-4">
+      <div className="flex flex-col items-center mt-4">
         {/* Link to the payment page */}
         <button
           onClick={() => {

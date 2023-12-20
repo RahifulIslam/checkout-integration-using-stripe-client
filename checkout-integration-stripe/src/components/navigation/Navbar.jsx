@@ -12,13 +12,10 @@ const Navbar = () => {
               <div className="text-white text-2xl font-bold">
               <Link to="/product-list">Products</Link>
               </div>
-              <div className="flex space-x-4">
-                {/* <a href="#" className="text-white hover:text-gray-300">Home</a> */}
+              <div className="flex items-center space-x-4">
                 <button onClick={handleClick} className="text-white hover:text-gray-300"> 
                 <Link to="/">Log Out</Link>
                 </button>
-                {/* <a href="#" className="text-white hover:text-gray-300">Services</a>
-                <a href="#" className="text-white hover:text-gray-300">Contact</a> */}
               </div>
             </div>
           </div>

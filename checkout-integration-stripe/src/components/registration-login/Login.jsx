@@ -57,7 +57,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="mt-1 p-2 w-full sm:w-96 border rounded-md"
+              className="mt-1 p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -74,7 +74,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="mt-1 p-2 w-full sm:w-96 border rounded-md"
+              className="mt-1 p-2 w-full border rounded-md"
               required
             />
           </div>
@@ -87,7 +87,7 @@ const Login = () => {
           {errorMessage && (
             <p style={{ color: "red", marginTop: "8px" }}>{errorMessage}</p>
           )}
-          <div className="mt-4 text-green-500 underline flex justify-center lg:hidden">
+          <div className="mt-4 text-green-500 underline flex justify-center">
             <Link to="/registration">Create a new account</Link>
           </div>
         </form>
